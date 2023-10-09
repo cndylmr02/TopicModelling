@@ -29,7 +29,6 @@ nltk.download("stopwords")
 DATASETS = {
     'Data PTA Trunojoyo Program Studi Psikologi': {
         'path': 'https://github.com/cndylmr02/TopicModelling/blob/main/Data.xlsx',
-        pd.read_excel(r'path'),
         'column': 'pta-trunojoyo',
         'url': 'https://github.com/cndylmr02/TopicModelling/blob/main/Data.xlsx',
         'description': (
@@ -125,7 +124,7 @@ URL_REGEX_STR = r'((http|https)\:\/\/)?[a-zA-Z0-9\.\/\?\:@\-_=#]+\.([a-zA-Z]){2,
 @st.experimental_memo()
 def generate_texts_df(selected_dataset: str):
     dataset = DATASETS[selected_dataset]
-    return pd.read_exel(f'{dataset["path"]}')
+    return pd.read_exel(f'{dataset["url"]}')
 
 
 @st.experimental_memo()
