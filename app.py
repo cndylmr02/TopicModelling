@@ -28,7 +28,7 @@ nltk.download("stopwords")
 
 DATASETS = {
     'Data PTA Trunojoyo Program Studi Psikologi': {
-        'path': '/content/drive',
+        'path': /content/drive/MyDrive/data.xlsx',
         'column': 'pta-trunojoyo',
         'url': 'https://docs.google.com/spreadsheets/d/17uJP5XHAKQlrh_JAbNKKcFC5V4H8gOHk/edit?usp=drive_link&ouid=113026462476941308120&rtpof=true&sd=true',
         'description': (
