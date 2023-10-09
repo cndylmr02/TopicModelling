@@ -124,7 +124,7 @@ URL_REGEX_STR = r'((http|https)\:\/\/)?[a-zA-Z0-9\.\/\?\:@\-_=#]+\.([a-zA-Z]){2,
 @st.experimental_memo()
 def generate_texts_df(selected_dataset: str):
     dataset = DATASETS[selected_dataset]
-    return pd.read_exel(f'{dataset["url"]}', engine = 'openpyxl')
+    return pd.read_excel(f'{dataset["url"]}', engine = 'openpyxl')
 
 
 @st.experimental_memo()
