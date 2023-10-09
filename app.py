@@ -29,7 +29,7 @@ nltk.download("stopwords")
 DATASETS = {
     'Data PTA Trunojoyo Program Studi Psikologi': {
         'path': 'https://github.com/cndylmr02/TopicModelling/blob/main/Data.xlsx',
-        pd.read_excel('path'),
+        pd.read_excel(r'path'),
         'column': 'pta-trunojoyo',
         'url': 'https://github.com/cndylmr02/TopicModelling/blob/main/Data.xlsx',
         'description': (
