@@ -220,7 +220,6 @@ def perplexity_section():
     st.markdown('Viz., https://en.wikipedia.org/wiki/Perplexity')
     st.latex(r'Perplexity = \exp\left(-\frac{\sum_d \log(p(w_d|\Phi, \alpha))}{N}\right)')
 
-
 def coherence_section():
     with st.spinner('Calculating Coherence Score ...'):
         coherence = calculate_coherence(st.session_state.model, st.session_state.corpus, 'u_mass')
@@ -279,7 +278,7 @@ if __name__ == '__main__':
 
     with st.expander('Additional Details'):
         st.markdown('The objective can be viewed as a matrix factorization.')
-        st.image('./data/mf.png', use_column_width=True)
+        st.image('./mf.png', use_column_width=True)
         st.markdown('This factorization makes the methods much more efficient than directly characterizing documents '
                     'in term of words.')
         st.markdown('More information on LDA and NMF can be found at '
@@ -364,7 +363,7 @@ if __name__ == '__main__':
             wc = WordCloud(font_path=WORDCLOUD_FONT_PATH, width=700, height=600,
                            background_color='white', collocations=collocations, prefer_horizontal=1.0,
                            color_func=lambda *args, **kwargs: colors[index])
-            with cols[index % 3]:
+            with cols[index % 4]:
                 wc.generate_from_frequencies(dict(topic[1]))
                 st.image(wc.to_image(), caption=f'Topic #{index}', use_column_width=True)
 
