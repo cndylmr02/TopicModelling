@@ -26,21 +26,27 @@ DEFAULT_NUM_TOPICS = 4
 
 nltk.download("stopwords")
 
-DATASETS = {
-    'Data PTA Trunojoyo Program Studi Psikologi': {
-        'dataset': 'pd.read_exel(r"data.xlsx")',
-        'path': '/github.com/cndylmr02/TopicModelling/blob/main/data(1).xlsx',
-        'column': 'pta-trunojoyo',
-        'url': 'https://docs.google.com/spreadsheets/d/17uJP5XHAKQlrh_JAbNKKcFC5V4H8gOHk/edit?usp=drive_link&ouid=113026462476941308120&rtpof=true&sd=true',
-        'description': (
-            'I scraped Elon Musk\'s tweets from the last 5 years using twint library. My inspiration behind this is to '
-            'see how public personalities are influencing common people on Social Media Platforms. I would love to see '
-            'some notebooks around this dataset, giving us insights like what are the topics which Tesla mostly tweets '
-            'about? How are Tesla\'s stocks being influenced by his tweets?'
-        )
-    },
+# DATASETS = {
+#     'Data PTA Trunojoyo Program Studi Psikologi': {
+#         'dataset': 'pd.read_exel(r"data.xlsx")',
+#         'path': '/github.com/cndylmr02/TopicModelling/blob/main/data(1).xlsx',
+#         'column': 'pta-trunojoyo',
+#         'url': 'https://docs.google.com/spreadsheets/d/17uJP5XHAKQlrh_JAbNKKcFC5V4H8gOHk/edit?usp=drive_link&ouid=113026462476941308120&rtpof=true&sd=true',
+#         'description': (
+#             'I scraped Elon Musk\'s tweets from the last 5 years using twint library. My inspiration behind this is to '
+#             'see how public personalities are influencing common people on Social Media Platforms. I would love to see '
+#             'some notebooks around this dataset, giving us insights like what are the topics which Tesla mostly tweets '
+#             'about? How are Tesla\'s stocks being influenced by his tweets?'
+#         )
+#     },
 
-}
+# }
+# Dataset
+dataset = pd.read_excel(r"data(1).xlsx")
+
+st.write('')
+st.write('## Dataset')
+st.dataframe(data=dataset)
 
 
 def lda_options():
