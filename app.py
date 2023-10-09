@@ -30,12 +30,12 @@ DATASETS = {
     'Data PTA Trunojoyo Program Studi Psikologi': {
         'path': './Data.xlsx',
         'column': 'pta-trunojoyo',
-        'url': 'https://docs.google.com/spreadsheets/d/17uJP5XHAKQlrh_JAbNKKcFC5V4H8gOHk/edit?usp=drive_link&ouid=113026462476941308120&rtpof=true&sd=true',
+        'url': 'https://github.com/cndylmr02/TopicModelling/blob/main/Data.xlsx',
         'description': (
-            'I scraped Elon Musk\'s tweets from the last 5 years using twint library. My inspiration behind this is to '
-            'see how public personalities are influencing common people on Social Media Platforms. I would love to see '
-            'some notebooks around this dataset, giving us insights like what are the topics which Tesla mostly tweets '
-            'about? How are Tesla\'s stocks being influenced by his tweets?'
+            'Dataset yang diambil merupakan data crawling pada website pta.trunojoyo dengan mengambil data Tugas Akhir  '
+            'yang ditulis oleh Mahasiswa Universitas Trunojoyo Madura. '
+            'Pada data crawling tersebut data yang akan diproses merupakan data pada tabel abstrak untuk menentukan probabilitas suatu kata pada suatu dokumen '
+            'Berikut cara menjalankan suatu data abstrak dengan Topic Model'
         )
     },
 
