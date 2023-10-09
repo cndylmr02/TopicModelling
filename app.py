@@ -42,7 +42,7 @@ nltk.download("stopwords")
 
 # }
 # Dataset
-dataset = pd.read_excel(r"data(1).xlsx")
+dataset = pd.read_excel(r"data.xlsx")
 
 st.write('')
 st.write('## Dataset')
