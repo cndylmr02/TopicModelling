@@ -28,7 +28,7 @@ nltk.download("stopwords")
 
 DATASETS = {
     'Data PTA Trunojoyo Program Studi Psikologi': {
-        'path': '/content/drive/MyDrive/data.xlsx',
+        'path': '/github.com/cndylmr02/TopicModelling/blob/main/data(1).xlsx',
         'column': 'pta-trunojoyo',
         'url': 'https://docs.google.com/spreadsheets/d/17uJP5XHAKQlrh_JAbNKKcFC5V4H8gOHk/edit?usp=drive_link&ouid=113026462476941308120&rtpof=true&sd=true',
         'description': (
@@ -124,7 +124,7 @@ URL_REGEX_STR = r'((http|https)\:\/\/)?[a-zA-Z0-9\.\/\?\:@\-_=#]+\.([a-zA-Z]){2,
 @st.experimental_memo()
 def generate_texts_df(selected_dataset: str):
     dataset = DATASETS[selected_dataset]
-    return pd.read_exel(f'{dataset["path"]}')
+    return pd.read_exel(f'{dataset["url"]}')
 
 
 @st.experimental_memo()
@@ -208,7 +208,6 @@ def white_or_black_text(background_color):
     green = int(background_color[3:5], 16)
     blue = int(background_color[5:], 16)
     return 'black' if (red * 0.299 + green * 0.587 + blue * 0.114) > 186 else 'white'
-
 
 def perplexity_section():
     with st.spinner('Calculating Perplexity ...'):
