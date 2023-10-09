@@ -244,7 +244,7 @@ def train_projection(projection, n_components, df):
 
 
 if __name__ == '__main__':
-    st.set_page_config(page_title='Topic Modeling', page_icon='./data/favicon.png', layout='wide')
+    st.set_page_config(page_title='Topic Modeling', page_icon='./favicon.png', layout='wide')
 
     preprocessing_options = st.sidebar.form('preprocessing-options')
     with preprocessing_options:
