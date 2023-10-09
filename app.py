@@ -29,7 +29,7 @@ nltk.download("stopwords")
 DATASETS = {
     'Data PTA Trunojoyo Program Studi Psikologi': {
         'path': '/content/drive',
-        'column': 'tweet',
+        'column': 'pta-trunojoyo',
         'url': 'https://docs.google.com/spreadsheets/d/17uJP5XHAKQlrh_JAbNKKcFC5V4H8gOHk/edit?usp=drive_link&ouid=113026462476941308120&rtpof=true&sd=true',
         'description': (
             'I scraped Elon Musk\'s tweets from the last 5 years using twint library. My inspiration behind this is to '
@@ -38,16 +38,7 @@ DATASETS = {
             'about? How are Tesla\'s stocks being influenced by his tweets?'
         )
     },
-    # 'Airline Tweets': {
-    #     'path': './data/Tweets.csv.zip',
-    #     'column': 'text',
-    #     'url': 'https://www.kaggle.com/crowdflower/twitter-airline-sentiment',
-    #     'description': (
-    #         'A sentiment analysis job about the problems of each major U.S. airline. Twitter data was scraped from '
-    #         'February of 2015 and contributors were asked to first classify positive, negative, and neutral tweets, '
-    #         'followed by categorizing negative reasons (such as "late flight" or "rude service").'
-    #     )
-    # }
+
 }
 
 
@@ -133,7 +124,7 @@ URL_REGEX_STR = r'((http|https)\:\/\/)?[a-zA-Z0-9\.\/\?\:@\-_=#]+\.([a-zA-Z]){2,
 @st.experimental_memo()
 def generate_texts_df(selected_dataset: str):
     dataset = DATASETS[selected_dataset]
-    return pd.read_csv(f'{dataset["path"]}')
+    return pd.read_exel(f'{dataset["path"]}')
 
 
 @st.experimental_memo()
