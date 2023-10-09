@@ -13,3 +13,4 @@ setuptools
 streamlit
 umap-learn
 wordcloud
+openpyxl
