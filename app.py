@@ -30,7 +30,7 @@ DATASETS = {
     'Data PTA Trunojoyo Program Studi Psikologi': {
         'path': 'https://github.com/cndylmr02/TopicModelling/blob/main/Data.xlsx',
         'column': 'pta-trunojoyo',
-        'url': 'https://github.com/cndylmr02/TopicModelling/blob/main/Data.xlsx',
+        'url': 'https://docs.google.com/spreadsheets/d/17uJP5XHAKQlrh_JAbNKKcFC5V4H8gOHk/edit#gid=1438945933',
         'description': (
             'Dataset yang diambil merupakan data crawling pada website pta.trunojoyo dengan mengambil data Tugas Akhir  '
             'yang ditulis oleh Mahasiswa Universitas Trunojoyo Madura. '
