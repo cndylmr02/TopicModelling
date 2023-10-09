@@ -113,7 +113,7 @@ MODELS = {
 
 COLORS = [color for color in mcolors.XKCD_COLORS.values()]
 
-WORDCLOUD_FONT_PATH = r'./data/Inkfree.ttf'
+WORDCLOUD_FONT_PATH = r'./Inkfree.ttf'
 
 EMAIL_REGEX_STR = r'\S*@\S*'
 MENTION_REGEX_STR = r'@\S*'
@@ -268,7 +268,7 @@ if __name__ == '__main__':
     st.title('Topic Modeling')
     st.header('What is topic modeling?')
     with st.expander('Hero Image'):
-        st.image('./data/is-this-a-topic-modeling.jpg', caption='No ... no it\'s not ...', use_column_width=True)
+        st.image('./is-this-a-topic-modeling.jpg', caption='No ... no it\'s not ...', use_column_width=True)
     st.markdown(
         'Topic modeling is a broad term. It encompasses a number of specific statistical learning methods. '
         'These methods do the following: explain documents in terms of a set of topics and those topics in terms of '
