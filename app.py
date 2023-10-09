@@ -293,7 +293,7 @@ if __name__ == '__main__':
 
     with st.expander('Dataset Description'):
         st.markdown(DATASETS[selected_dataset]['description'])
-        st.markdown(DATASETS[selected_dataset]['url'])
+        st.markdown(DATASETS[selected_dataset]['path'])
 
     text_column = DATASETS[selected_dataset]['column']
     texts_df = generate_texts_df(selected_dataset)
