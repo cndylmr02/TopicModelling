@@ -55,7 +55,7 @@ def calculate_tfidf(texts):
     return tfidf_matrix
 
 # Teks yang akan dihitung TF-IDF
-texts = (st.dataframe)
+texts = ['st.dataframe']
 
 # Hitung TF-IDF
 tfidf_result = calculate_tfidf(texts)
