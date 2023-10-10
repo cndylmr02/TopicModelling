@@ -411,7 +411,7 @@ if __name__ == '__main__':
 
         if generate_projection_clicked:
             topic_weights = []
-            for index, topic_weight in enumerate(st.session_state.model[st.session_state.corpus]):
+            for index, topic_weight in enumerate(st.session_state.model[st.session_state.id2word.doc2bow(text) for text in texts]):
                 weight_vector = [0] * int(st.session_state.model_kwargs['num_topics'])
                 for topic, weight in topic_weight:
                     weight_vector[topic] = weight
