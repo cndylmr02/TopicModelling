@@ -57,8 +57,10 @@ def calculate_tfidf(texts):
 # Teks yang akan dihitung TF-IDF
 texts = ['dataset']
 
+all_text = " ".join(texts)
+
 # Hitung TF-IDF
-tfidf_result = calculate_tfidf(texts)
+tfidf_result = calculate_tfidf([all_text])
 
 # Tampilkan hasilnya
 st.write("Hasil Perhitungan TF-IDF:")
