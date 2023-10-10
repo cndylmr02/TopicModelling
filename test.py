@@ -10,6 +10,7 @@ import regex
 import seaborn as sns
 import streamlit as st
 from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.feature_extraction.text import TfidfVectorizer
 from gensim import corpora
 from gensim.models import CoherenceModel
 from gensim.utils import simple_preprocess
