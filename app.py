@@ -30,7 +30,7 @@ DATASETS = {
     'Data PTA Trunojoyo Program Studi Psikologi': {
         'path': './Data.xlsx.zip',
         'column': 'text',
-        'url': 'https://docs.google.com/spreadsheets/d/17uJP5XHAKQlrh_JAbNKKcFC5V4H8gOHk/edit#gid=1438945933',
+        'url': 'https://docs.google.com/spreadsheets/d/1A6wnvWDdhJZga1xEde-xgw3phZe3ho_6/edit?usp=sharing&ouid=113026462476941308120&rtpof=true&sd=true',
         'description': (
             'Dataset yang diambil merupakan data crawling pada website pta.trunojoyo dengan mengambil data Tugas Akhir  '
             'yang ditulis oleh Mahasiswa Universitas Trunojoyo Madura. '
