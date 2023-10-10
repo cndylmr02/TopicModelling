@@ -33,3 +33,7 @@ st.write("""
 """)
 # Dataset
 dataset = pd.read_excel(r"Data.xlsx")
+
+st.write('')
+st.write('## Dataset')
+st.dataframe(data=dataset)
