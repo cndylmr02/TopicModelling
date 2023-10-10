@@ -117,10 +117,10 @@ HASHTAG_REGEX_STR = r'#\S+'
 URL_REGEX_STR = r'((http|https)\:\/\/)?[a-zA-Z0-9\.\/\?\:@\-_=#]+\.([a-zA-Z]){2,6}([a-zA-Z0-9\.\&\/\?\:@\-_=#])*'
 
 
-@st.experimental_memo()
-def generate_texts_df(selected_dataset: str):
-    dataset1 = DATASETS[selected_dataset]
-    return pd.read_excel(f'{dataset1["dataset"]}')
+# @st.experimental_memo()
+# def generate_texts_df(selected_dataset: str):
+#     dataset1 = DATASETS[selected_dataset]
+#     return pd.read_excel(f'{dataset1["dataset"]}')
 
 
 @st.experimental_memo()
