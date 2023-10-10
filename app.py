@@ -28,9 +28,9 @@ nltk.download("stopwords")
 
 DATASETS = {
     'Data PTA Trunojoyo Program Studi Psikologi': {
-        'path': 'https://github.com/cndylmr02/TopicModelling/blob/main/data1.xlsx.zip',
+        'path': '/TopicModelling/blob/main/data1.xlsx.zip',
         'column': 'text',
-        'url': 'https://github.com/cndylmr02/TopicModelling/blob/main/data1.xlsx.zip',
+        'url': 'https://docs.google.com/spreadsheets/d/1A6wnvWDdhJZga1xEde-xgw3phZe3ho_6/edit?usp=drive_link&ouid=113026462476941308120&rtpof=true&sd=true',
         'description': (
             'Dataset yang diambil merupakan data crawling pada website pta.trunojoyo dengan mengambil data Tugas Akhir  '
             'yang ditulis oleh Mahasiswa Universitas Trunojoyo Madura. '
@@ -121,10 +121,27 @@ HASHTAG_REGEX_STR = r'#\S+'
 URL_REGEX_STR = r'((http|https)\:\/\/)?[a-zA-Z0-9\.\/\?\:@\-_=#]+\.([a-zA-Z]){2,6}([a-zA-Z0-9\.\&\/\?\:@\-_=#])*'
 
 
-@st.experimental_memo()
-def generate_texts_df(selected_dataset: str):
-    dataset = DATASETS[selected_dataset]
-    return pd.read_excel(f'{dataset["url"]}', engine = 'openpyxl')
+# @st.experimental_memo()
+# def generate_texts_df(selected_dataset: str):
+#     dataset = DATASETS[selected_dataset]
+#     return pd.read_excel(f'{dataset["path"]}', engine = "openpyxl")
+
+from openpyxl import load_workbook
+
+def read_excel_with_openpyxl(file_path):
+    try:
+        wb = load_workbook(file_path, read_only=True)
+        ws = wb.active
+        data = []
+        for row in ws.iter_rows(values_only=True):
+            data.append(row)
+        return pd.DataFrame(data)
+    except Exception as e:
+        print(f"Error: {e}")
+        return None
+
+# Menggunakan fungsi di atas untuk membaca file Excel
+texts_df = read_excel_with_openpyxl(dataset["url"])
 
 
 @st.experimental_memo()
@@ -402,7 +419,7 @@ if __name__ == '__main__':
 
     with st.expander('Low Dimensional Projections'):
         with st.form('projections-form'):
-            left_column, right_column = st.columns(2)
+            left_column, right_column = st.columns(2).next()
             projection = left_column.selectbox('Projection', ['PCA', 'T-SNE', 'UMAP'], help='TODO ...')
             plot_type = right_column.selectbox('Plot', ['2D', '3D'], help='TODO ...')
             n_components = 3
