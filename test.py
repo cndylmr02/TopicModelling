@@ -46,7 +46,7 @@ st.dataframe(data=dataset)
 
 # Extraction Data (TF-IDF)
 st.write("## Dataset Extraction")
-count = countvectorizer.fit_transform(df['st.dataframe'])
+count = countvectorizer.fit_transform(df['dataset'])
 tfidf = tfidfvectorizer.get_feature_names_out()
 fitur = pd.DataFrame(data = count.toarray(), columns = tfidf)
 st.dataframe(fitur)
