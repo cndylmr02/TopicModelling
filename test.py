@@ -45,21 +45,21 @@ st.write('')
 st.write('## Dataset')
 st.dataframe(data=dataset)
 
-# Extraction Data (TF-IDF)
-# Fungsi untuk menghitung TF-IDF
-def calculate_tfidf(texts):
-    vectorizer = TfidfVectorizer()
-    tfidf_matrix = vectorizer.fit_transform(texts)
-    return tfidf_matrix
+# # Extraction Data (TF-IDF)
+# # Fungsi untuk menghitung TF-IDF
+# def calculate_tfidf(texts):
+#     vectorizer = TfidfVectorizer()
+#     tfidf_matrix = vectorizer.fit_transform(texts)
+#     return tfidf_matrix
 
-# Teks yang akan dihitung TF-IDF
-texts = (st.dataframe)
+# # Teks yang akan dihitung TF-IDF
+# texts = (st.dataframe)
 
-# Hitung TF-IDF
-tfidf_result = calculate_tfidf(texts)
+# # Hitung TF-IDF
+# tfidf_result = calculate_tfidf(texts)
 
-# Tampilkan hasilnya
-st.write("Hasil Perhitungan TF-IDF:")
-st.write(tfidf_result.toarray())
+# # Tampilkan hasilnya
+# st.write("Hasil Perhitungan TF-IDF:")
+# st.write(tfidf_result.toarray())
 
 
