@@ -39,26 +39,13 @@ st.write("""
 ###### Data tersebut berisi data Abstrak yang telah di proses sehingga data yang dimunculkan berupa data vectorisasi  
 """)
 # Dataset
-dataset = pd.read_excel(r"Data.xlsx.zip")
+dataset = pd.read_excel(r"data1.xlsx.zip")
 
 st.write('')
 st.write('## Dataset')
 st.dataframe(data=dataset)
 
-# # Extraction Data (TF-IDF)
-# # Fungsi untuk menghitung TF-IDF
-# def calculate_tfidf(texts):
-#     vectorizer = TfidfVectorizer()
-#     tfidf_matrix = vectorizer.fit_transform(texts)
-#     return tfidf_matrix
 
-# # Teks yang akan dihitung TF-IDF
-# texts = (st.dataframe)
-
-# # Hitung TF-IDF
-# tfidf_result = calculate_tfidf(texts)
-
-# # Tampilkan hasilnya
 # st.write("Hasil Perhitungan TF-IDF:")
 # st.write(tfidf_result.toarray())
 
