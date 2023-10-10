@@ -28,9 +28,9 @@ nltk.download("stopwords")
 
 DATASETS = {
     'Data PTA Trunojoyo Program Studi Psikologi': {
-        'path': 'https://docs.google.com/spreadsheets/d/1A6wnvWDdhJZga1xEde-xgw3phZe3ho_6/edit?usp=sharing&ouid=113026462476941308120&rtpof=true&sd=true',
+        'path': 'https://github.com/cndylmr02/TopicModelling/blob/main/data1.xlsx.zip',
         'column': 'text',
-        'url': 'https://docs.google.com/spreadsheets/d/1A6wnvWDdhJZga1xEde-xgw3phZe3ho_6/edit?usp=sharing&ouid=113026462476941308120&rtpof=true&sd=true',
+        'url': 'https://github.com/cndylmr02/TopicModelling/blob/main/data1.xlsx.zip',
         'description': (
             'Dataset yang diambil merupakan data crawling pada website pta.trunojoyo dengan mengambil data Tugas Akhir  '
             'yang ditulis oleh Mahasiswa Universitas Trunojoyo Madura. '
