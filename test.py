@@ -45,6 +45,8 @@ st.write('')
 st.write('## Dataset')
 st.dataframe(data=dataset)
 
+# Teks yang akan dihitung TF-IDF
+texts = ['dataset']
 
 # st.write("Hasil Perhitungan TF-IDF:")
 # st.write(tfidf_result.toarray())
@@ -53,10 +55,7 @@ def calculate_tfidf(texts):
     vectorizer = TfidfVectorizer()
     tfidf_matrix = vectorizer.fit_transform(texts)
     return tfidf_matrix
-
-# Teks yang akan dihitung TF-IDF
-texts = ['dataset']
-
+    
 all_text = " ".join(texts)
 
 # Hitung TF-IDF
