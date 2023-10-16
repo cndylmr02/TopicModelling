@@ -14,5 +14,3 @@ streamlit
 umap-learn
 wordcloud
 openpyxl
-CountVectorizer
-TfidfVectorizer
