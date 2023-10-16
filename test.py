@@ -11,6 +11,7 @@ import seaborn as sns
 import streamlit as st
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.decomposition import LatentDirichletAllocation
 from gensim import corpora
 from gensim.models import CoherenceModel
 from gensim.utils import simple_preprocess
@@ -63,5 +64,14 @@ tfidf_result = calculate_tfidf([all_text])
 
 # Tampilkan hasilnya
 st.write("Hasil Perhitungan TF-IDF:")
-st.write(tfidf_result.toarray(all_text))
+st.write(tfidf_result.toarray())
 
+# Tampilan Topic
+lda_model = LatentDirichletAllocation(n_components=4, learning_method='online', random_state=42, max_iter=1)
+lda_top = lda_model.fit_transform(count_wm)
+
+# Membuat DataFrame dari data proporsi topik
+df = pd.DataFrame(lda_top, columns=[f"Topic {i+1}" for i in range(4)])
+
+# Menampilkan DataFrame sebagai tabel
+return df
