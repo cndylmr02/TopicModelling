@@ -63,5 +63,5 @@ tfidf_result = calculate_tfidf([all_text])
 
 # Tampilkan hasilnya
 st.write("Hasil Perhitungan TF-IDF:")
-st.write(tfidf_result.toarray())
+st.write(tfidf_result.toarray(all_text))
 
